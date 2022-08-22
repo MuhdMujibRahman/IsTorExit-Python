@@ -2,6 +2,7 @@
 import pydig
 from ipcalc import Network
 
+
 def is_tor_exit_ip(ip:str):
     reversed_ip = ".".join(ip.split('.')[::-1])
     result = pydig.query(f'{reversed_ip}.dnsel.torproject.org', 'A')
