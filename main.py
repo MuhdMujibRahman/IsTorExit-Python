@@ -1,7 +1,7 @@
-
+#!/usr/bin/python
 import pydig
 from ipcalc import Network
-
+import sys
 
 def is_tor_exit_ip(ip:str):
     reversed_ip = ".".join(ip.split('.')[::-1])
@@ -17,4 +17,8 @@ def get_to_ip_range(ip:str):
     localnet = Network(f'{ip}/{prefix}')
     ip_range = f'{localnet.network()}/{prefix}'
     return ip_range
-    
+
+if __name__ == "__main__":
+    ip = sys.argv
+    if is_tor_exit_ip(ip):
+        get_to_ip_range(ip)
