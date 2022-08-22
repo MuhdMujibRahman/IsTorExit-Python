@@ -1,2 +1,3 @@
-# To verify tor exit ip address using DNS query
+# Verify tor exit ip address
 
+To verify and update Terraform IP address
