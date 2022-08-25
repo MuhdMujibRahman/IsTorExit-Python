@@ -1,3 +1,3 @@
 # Verify tor exit ip address
 
-To verify and update Terraform IP address
+This python script use 'dig' command for dns query. 
